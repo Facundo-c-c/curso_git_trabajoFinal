@@ -1,0 +1,76 @@
+{
+    "position": "top",
+    "height": 50,
+    "modules-left": ["custom/logo","mpris"],
+    "modules-center": ["sway/workspaces"],
+    "modules-right": ["tray","battery","custom/separator","wireplumber","custom/separator","clock"],
+	   
+    "sway/workspaces": {
+        "all-outputs": true,
+    "format": "{icon}",
+        "format-icons": {
+            "1": "I",
+            "2": "II",
+            "3": "III",
+            "4": "IV",
+            "5": "V",
+        },
+        "persistent-workspaces": {
+        "1": [],
+        "2": [],
+        "3": []
+         },
+        },
+
+    "clock": {
+     "interval": 60,
+     "format": "{:%H:%M}",
+     "max-length": 25,
+     "timezones":[ "America/Buenos_Aires"],
+     "tooltip": false 
+    },
+
+    "tray": {
+        "icon-size": 17,
+        "spacing":3,
+	"interval": 120,
+    },
+
+    "custom/separator": {
+        "format": " · ",
+        "interval": "once",
+        "tooltip": false
+   },
+
+"wireplumber": {
+    "format": "{icon}     {volume}%",
+    "format-muted": " 󰝟 ",
+    "on-click": "wpctl set-mute @DEFAULT_SINK@ toggle",
+    "format-icons": ["", "", ""],
+    "max-volume": 100,
+    "scroll-step": 5,
+},
+
+"mpris": {
+	"format":"{player_icon} {title}",
+	"format-paused":"{status_icon} {title}",
+  "max-length": 25,
+	"player-icons": {
+		"default": "  ",
+		"mpv": "🎵"
+	},
+	"status-icons": {
+		"paused": "  "
+	},
+},
+
+"battery": {
+    "bat": "BAT0",
+    "interval": 60,
+    "format": "{icon}  {capacity}%",
+    "format-icons": ["󰁺", "󰁼", "󰁾", "󰂀", "󰁹"],
+    "max-length": 30
+}
+
+}
+
